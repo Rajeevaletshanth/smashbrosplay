@@ -1,10 +1,29 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 // import CraftThumb from "@/public/images/craft-thumb.png";
 import CraftThumb from "@/public/images/banner/begins.jpg";
 import Shape from "@/public/images/footer/shape-one.png";
+import { useEffect, useState } from "react";
 
 const Craft = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // useEffect(() => {
+  //   // Function to update the width
+  //   const handleResize = () => {
+  //     setWidth(window.innerWidth);
+  //   };
+
+  //   // Add event listener on mount
+  //   window.addEventListener('resize', handleResize);
+
+  //   // Cleanup event listener on unmount
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
+
   return (
     <section className="section craft" id="scrollPosition">
       <div className="container">
@@ -16,7 +35,7 @@ const Craft = () => {
                 Let the Games Begin!
               </h2>
               <p>
-                Join the SmashBros crew and enjoy badminton, fun challenges, 
+                Join the SmashBros crew and enjoy badminton, fun challenges,
                 and plenty of laughs. No pressure, just good vibes and epic moments!
               </p>
               <div className="section__content-cta">
@@ -28,9 +47,12 @@ const Craft = () => {
           </div>
           <div className="col-12 col-lg-6 col-xxl-7">
             <div className="craft__thumb text-start text-lg-end">
-              <div className="reveal-img parallax-img">
+              {width > 990 ? <div className="reveal-img parallax-img">
                 <Image src={CraftThumb} alt="Image" priority />
               </div>
+                : <div className="reveal-img-mobile parallax-img">
+                  <Image src={CraftThumb} alt="Image" priority />
+                </div>}
             </div>
           </div>
         </div>
