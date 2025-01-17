@@ -66,9 +66,9 @@ const BlogOne = () => {
             <div
               className={
                 "blog__single topy-tilt" +
-                (isHover === 0 ? " blog__single-active" : " ")
+                (isHover === 1 ? " blog__single-active" : " ")
               }
-              onMouseEnter={() => setIsHover(0)}
+              onMouseEnter={() => setIsHover(1)}
             >
               <div className="blog__single-thumb">
                 <Link href="blog-single">
@@ -92,9 +92,9 @@ const BlogOne = () => {
             <div
               className={
                 "blog__single topy-tilt" +
-                (isHover === 1 ? " blog__single-active" : " ")
+                (isHover === 2 ? " blog__single-active" : " ")
               }
-              onMouseEnter={() => setIsHover(1)}
+              onMouseEnter={() => setIsHover(2)}
             >
               <div className="blog__single-thumb">
                 <Link href="blog-single">

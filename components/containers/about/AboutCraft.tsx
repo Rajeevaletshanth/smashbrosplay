@@ -8,7 +8,7 @@ import Shape from "@/public/images/footer/shape-one.png";
 import { useEffect, useState } from "react";
 
 const AboutCraft = () => {
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(1000);
   
     useEffect(() => {
       if (typeof window !== 'undefined') {
