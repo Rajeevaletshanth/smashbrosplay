@@ -11,15 +11,7 @@ import apple from "@/public/images/apple.png";
 import meta from "@/public/images/meta.png";
 import MascotSelection from "./home/MascotSelection";
 import axios from "axios";
-import one from "@/public/images/mascots/1.png";
-import two from "@/public/images/mascots/2.png";
-import three from "@/public/images/mascots/3.png";
-import four from "@/public/images/mascots/4.png";
-import five from "@/public/images/mascots/5.png";
-import six from "@/public/images/mascots/6.png";
-import seven from "@/public/images/mascots/7.png";
-import eight from "@/public/images/mascots/8.png";
-import nine from "@/public/images/mascots/9.png";
+import { useSearchParams } from 'next/navigation';
 
 const RegistrationSection = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -34,15 +26,17 @@ const RegistrationSection = () => {
   const [selectedMascot, setSelectedMascot] = useState<any>(null)
   const [data, setData] = useState<any>(null)
 
-  const getData = async () => {
+  const searchParams = useSearchParams();
+
+  const getData = async (code:any) => {
     try {
-      const response: any = await axios.get(`https://api.brexe.com/sbplay/getBySecret/${secretCode}`)
+      const response: any = await axios.get(`https://api.brexe.com/sbplay/getBySecret/${code}`)
       if (response.data.response === "success") {
+        setCaptainName(response.data.data[0].captain_name)
+        setPartnerName(response.data.data[0].partner_name)
         if (response.data.data[0].is_registered) {
           setData(response.data.data[0])
           setTeamName(response.data.data[0].team_name)
-          setCaptainName(response.data.data[0].captain_name)
-          setPartnerName(response.data.data[0].partner_name)
           setSecretCode(response.data.data[0].secret_code)
           if (response.data.data[0].fav_mascot) {
             setMascot(response.data.data[0].fav_mascot)
@@ -67,9 +61,11 @@ const RegistrationSection = () => {
   }
 
   useEffect(() => {
-    if (secretCode)
-      getData()
-  }, [secretCode])
+    if (searchParams.get('secret_code')) {
+      const code :any = searchParams.get('secret_code');
+      getData(code)
+    }
+  }, [])
 
   const handleSubmit = async () => {
     try {
