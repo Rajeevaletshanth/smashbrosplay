@@ -1,116 +1,245 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import thumb from "@/public/images/registration wall.png";
 import mail from "@/public/images/contact/mail.png";
 import phone from "@/public/images/contact/phone.png";
 import location from "@/public/images/contact/location.png";
+import { useEffect, useState } from "react";
+import google from "@/public/images/google.png";
+import apple from "@/public/images/apple.png";
+import meta from "@/public/images/meta.png";
+import MascotSelection from "./home/MascotSelection";
+import axios from "axios";
+import one from "@/public/images/mascots/1.png";
+import two from "@/public/images/mascots/2.png";
+import three from "@/public/images/mascots/3.png";
+import four from "@/public/images/mascots/4.png";
+import five from "@/public/images/mascots/5.png";
+import six from "@/public/images/mascots/6.png";
+import seven from "@/public/images/mascots/7.png";
+import eight from "@/public/images/mascots/8.png";
+import nine from "@/public/images/mascots/9.png";
 
 const RegistrationSection = () => {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [mascot, setMascot] = useState("");
+  const [opened, setOpened] = useState<any>(null)
+  const [error, setError] = useState(null);
+  const [teamName, setTeamName] = useState("")
+  const [captainName, setCaptainName] = useState("")
+  const [partnerName, setPartnerName] = useState("")
+  const [secretCode, setSecretCode] = useState("xrvR5Ladb1")
+  const [selectedMascot, setSelectedMascot] = useState<any>(null)
+  const [data, setData] = useState<any>(null)
+
+  const getData = async () => {
+    try {
+      const response: any = await axios.get(`https://api.brexe.com/sbplay/getBySecret/${secretCode}`)
+      if (response.data.response === "success") {
+        if (response.data.data[0].is_registered) {
+          setData(response.data.data[0])
+          setTeamName(response.data.data[0].team_name)
+          setCaptainName(response.data.data[0].captain_name)
+          setPartnerName(response.data.data[0].partner_name)
+          setSecretCode(response.data.data[0].secret_code)
+          if (response.data.data[0].fav_mascot) {
+            setMascot(response.data.data[0].fav_mascot)
+            setOpened(response.data.data[0].fav_mascot === 'Ninja' ? "one" :
+              response.data.data[0].fav_mascot === 'King' ? "two" :
+                response.data.data[0].fav_mascot === 'Wolf' ? "three" :
+                  response.data.data[0].fav_mascot === 'Paw' ? "four" :
+                    response.data.data[0].fav_mascot === 'Eagle' ? "five" :
+                      response.data.data[0].fav_mascot === 'Lion' ? "six" :
+                        response.data.data[0].fav_mascot === 'Bolt' ? "seven" : "eight"
+            )
+          }
+        } else {
+          setData(null)
+        }
+      } else {
+        setData(null)
+      }
+    } catch (error) {
+      setData(null)
+    }
+  }
+
+  useEffect(() => {
+    if (secretCode)
+      getData()
+  }, [secretCode])
+
+  const handleSubmit = async () => {
+    try {
+      setLoading(true)
+      const response: any = await axios.put(`https://api.brexe.com/sbplay/edit/${secretCode}`, {
+        team_name: teamName,
+        captain_name: captainName,
+        partner_name: partnerName,
+        fav_mascot: mascot
+      })
+      if (response.data.response === "success") {
+
+      } else {
+        setError(response.data.message)
+      }
+    } catch (error) {
+      setError((error as any).message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <section className="section m-contact fade-wrapper">
       <div className="container">
-        {/* <div className="row gaper section pt-0">
-          <div className="col-12 col-sm-6 col-lg-4">
-            <div className="m-contact__single fade-top">
-              <div className="thumb">
-                <Image src={mail} alt="Image" priority />
-              </div>
-              <div className="content">
-                <h3>Email</h3>
-                <p>
-                  <Link href="mailto:alma.lawson@example.com">
-                    alma.lawson@example.com
-                  </Link>
-                </p>
-                <p>
-                  <Link href="mailto:michael.mitc@example.com">
-                    michael.mitc@example.com
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-lg-4">
-            <div className="m-contact__single fade-top">
-              <div className="thumb">
-                <Image src={phone} alt="Image" priority />
-              </div>
-              <div className="content">
-                <h3>Phone</h3>
-                <p>
-                  <Link href="tel:219-555-0114">(480) 555-0103</Link>
-                </p>
-                <p>
-                  <Link href="tel:219-555-0114">(219) 555-0114</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-sm-6 col-lg-4">
-            <div className="m-contact__single fade-top">
-              <div className="thumb">
-                <Image src={location} alt="Image" priority />
-              </div>
-              <div className="content">
-                <h3>Location</h3>
-                <p>
-                  <Link href="tel:219-555-0114" target="_blank">
-                    4517 Washington Ave. Manchester, Kentucky 39495
-                  </Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className="row gaper align-items-center">
+
           <div className="col-12 col-lg-6 col-xl-6">
             <div className="m-contact__form">
-              <h3 className="title-animation fw-7 text-white text-uppercase mt-12">
-                PLEASE MESSAGE ME, IF YOU HAVE ANY QUERIES
-              </h3>
-              <form action="#" method="post">
-                <div className="input-single">
-                  <input
-                    type="text"
-                    name="c-name"
-                    id="cName"
-                    placeholder="Your Name"
-                    required
-                  />
+
+              {/* {data ? <section className="section overview pb-0 ">
+                <div className="container">
+                  <div className="row gaper fade-wrapper">
+                    <div className=" fade-top">
+                      <div
+                        className={
+                          "overview__single "}
+                      >
+                        <div className="overview__thumb">
+                          {selectedMascot && <Image src={selectedMascot} alt="Image" priority width={150} />}
+                        </div>
+                        <div className="overview__content">
+                          <h4>{data.team_name}</h4>
+                          <h6 className="tertiary-text mt-4">
+                            Player 1 : {data.captain_name} <br/>
+                            Player 2 : {data.partner_name} <br/>
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="input-single">
-                  <input
-                    type="email"
-                    name="c-Email"
-                    id="cEmail"
-                    placeholder="Your Email"
-                    required
-                  />
-                </div>
-                <div className="input-single">
-                  <input
-                    type="text"
-                    name="c-number"
-                    id="cnumber"
-                    placeholder="Phone Number"
-                    required
-                  />
-                </div>
-                <div className="input-single">
-                  <textarea
-                    name="c-message"
-                    id="cMessage"
-                    cols={30}
-                    rows={10}
-                    placeholder="Type A Message"
-                  ></textarea>
-                </div>
-                <div className="section__content-cta text-center">
-                  <button type="submit" className="btn btn--primary">
-                    Submit Now
-                  </button>
-                </div>
-              </form>
+              </section>
+                : */}
+                <section className="authentication2 auth-create">
+                  <div className="authentication-wrapper">
+                    <div className="authentication__content section">
+
+                      <div className="authentication__inner">
+                        <h3 className="title-animation fw-7 text-white text-uppercase mt-12">
+                          REGISTER YOUR TEAM DETAILS
+                        </h3>
+
+                        <form action="#" method="post">
+                          <div className="input-single">
+                            <label htmlFor="createuserName">Captain's Name</label>
+                            <div className="ic-group">
+                              <input
+                                type="text"
+                                name="createuser-name"
+                                id="createuserName"
+                                placeholder="Captain's Name"
+                                value={captainName}
+                                onChange={(e: any) => setCaptainName(e.target.value)}
+                                required
+                              />
+                              <span className="material-symbols-outlined">
+                                person
+                              </span>
+                            </div>
+                          </div>
+                          <div className="input-single">
+                            <label htmlFor="createuserName">Partner&apos;s Name</label>
+                            <div className="ic-group">
+                              <input
+                                type="text"
+                                name="createuser-name"
+                                id="createuserName"
+                                value={partnerName}
+                                placeholder="Partner&apos;s Name"
+                                onChange={(e: any) => setPartnerName(e.target.value)}
+                                required
+                              />
+                              <span className="material-symbols-outlined">
+                                handshake
+                              </span>
+                            </div>
+                          </div>
+                          <div className="input-single">
+                            <label htmlFor="createuserName">Team Name</label>
+                            <div className="ic-group">
+                              <input
+                                type="text"
+                                name="createuser-name"
+                                id="createuserName"
+                                placeholder="Team Name"
+                                value={teamName}
+                                onChange={(e: any) => setTeamName(e.target.value)}
+                                required
+                              />
+                              <span className="material-symbols-outlined">
+                                sports
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="input-single">
+                            <label htmlFor="createPassword">Secret Code</label>
+                            <div className="ic-group pass">
+                              <span
+                                className="material-symbols-outlined show-pass"
+                                onClick={() => setPasswordVisible(!passwordVisible)}
+                              >
+                                {passwordVisible ? "visibility" : "visibility_off"}
+                              </span>
+                              <input
+                                type={passwordVisible ? "text" : "password"}
+                                name="create-Password"
+                                id="createPassword"
+                                value={secretCode}
+                                placeholder="Enter Secret"
+                                onChange={(e: any) => setSecretCode(e.target.value)}
+                                required
+                              />
+                              <span className="material-symbols-outlined">key</span>
+                            </div>
+                          </div>
+                          <div className="input-single">
+                            <label htmlFor="createPassword">Favourite Mascot</label>
+                            <div className="ic-group mb-4" >
+                              <input
+                                type="text"
+                                name="createuser-name"
+                                id="createuserName"
+                                placeholder="Select or Enter your favourite mascot (Optional)"
+                                required
+                                value={mascot}
+                                onChange={(e: any) => setMascot(e.target.value)}
+                              />
+                              <span className="material-symbols-outlined">
+                                swords
+                              </span>
+                            </div>
+                            <MascotSelection opened={opened} setMascot={setMascot} />
+                          </div>
+
+                          <div className="section__content-cta">
+                            <button type="button" onClick={handleSubmit} disabled={loading || !captainName || !partnerName || !teamName || !secretCode} className={`btn btn--primary ${loading ? 'btn--loading' : ''}`} >
+                              {loading ? 'Registering' : data ? 'Update Now' : 'Register Now'}
+                            </button>
+                          </div>
+                          {error && <div className="p-4 mt-3 rounded-xl" style={{ backgroundColor: '#dc3545', borderRadius: '10px', color: 'white' }}>
+                            {error}
+                          </div>}
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                {/* } */}
             </div>
           </div>
           <div className="col-12 col-lg-6 col-xl-5 offset-xl-1">
