@@ -131,7 +131,7 @@ const RegistrationSection = () => {
 
                         <form action="#" method="post">
                           <div className="input-single">
-                            <label htmlFor="createuserName">Captain's Name</label>
+                            <label htmlFor="createuserName">Captain&apos;s Name</label>
                             <div className="ic-group">
                               <input
                                 type="text"
