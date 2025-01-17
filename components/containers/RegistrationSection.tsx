@@ -63,6 +63,7 @@ const RegistrationSection = () => {
   useEffect(() => {
     if (searchParams.get('secret_code')) {
       const code :any = searchParams.get('secret_code');
+      setSecretCode(code)
       getData(code)
     }
   }, [])
