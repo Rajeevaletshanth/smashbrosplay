@@ -6,7 +6,7 @@ import unlockThumb from "@/public/images/smashclash.jpg";
 import { useEffect, useState } from "react";
 
 const UnlockSection = () => {
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(1000);
   
     useEffect(() => {
       if (typeof window !== 'undefined') {
