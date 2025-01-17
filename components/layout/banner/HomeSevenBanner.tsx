@@ -56,13 +56,13 @@ const HomeSevenBanner = () => {
           <Image src={two} alt="Image" priority />
         </div>
       </section>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         youtube={{ mute: 0, autoplay: 0 }}
         isOpen={isOpen}
         videoId="RvreULjnzFo"
         onClose={() => setOpen(false)}
-      />
+      /> */}
     </>
   );
 };
