@@ -16,6 +16,8 @@ import HomeThreeBanner from "@/components/layout/banner/HomeThreeBanner";
 import HomeFourBanner from "@/components/layout/banner/HomeFourBanner";
 import HomeFiveBanner from "@/components/layout/banner/HomeFiveBanner";
 import HomeSevenBanner from "@/components/layout/banner/HomeSevenBanner";
+import FooterFour from "@/components/layout/footer/FooterFour";
+import CommonBanner from "@/components/layout/banner/CommonBanner";
 
 const page = () => {
   return (
@@ -23,16 +25,17 @@ const page = () => {
       <Header />
       <main>
         {/* <AboutBanner /> */}
-        <HomeFiveBanner/>
+        <CommonBanner title="Tournaments" />
         <AboutTextSlider />
-        <AboutPoster />
+        {/* <AboutPoster /> */}
         <AboutCraft />
-        <AboutOverview />
+        {/* <AboutOverview />
         <AboutTool />
         <Sponsor />
-        <Review />
+        <Review /> */}
+        <div style={{padding:'100px'}}></div>
       </main>
-      <FooterTwo />
+      <FooterFour />
       <InitCustomCursor />
       <ScrollProgressButton />
       <Animations />

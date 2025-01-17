@@ -15,7 +15,7 @@ const FooterFour = () => {
                 <div className="col-12 col-lg-3">
                   <div className="footer__nav-logo text-center text-lg-start">
                     <Link href="/" aria-label="home page" title="logo">
-                      <Image src={Logo} alt="Image" priority />
+                      <Image src={Logo} alt="Image" priority width={120}/>
                     </Link>
                   </div>
                 </div>
@@ -26,13 +26,7 @@ const FooterFour = () => {
                         <Link href="/">Home</Link>
                       </li>
                       <li>
-                        <Link href="about-us">About Us</Link>
-                      </li>
-                      <li>
-                        <Link href="shop">Shop</Link>
-                      </li>
-                      <li>
-                        <Link href="blog">Blog</Link>
+                      <Link href="tournaments">Tournaments</Link>
                       </li>
                       <li>
                         <Link href="contact-us">Contact Us</Link>

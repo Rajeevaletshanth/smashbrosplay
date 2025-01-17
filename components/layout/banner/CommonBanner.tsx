@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import one from "@/public/images/banner/cmn-thumb-left.png";
-import two from "@/public/images/banner/cmn-thumb-right.png";
+import one from "@/public/images/SmashClash.png";
+import two from "@/public/images/SmashClash.png";
 
 const CommonBanner = ({ title }: any) => {
   useEffect(() => {
@@ -43,12 +43,12 @@ const CommonBanner = ({ title }: any) => {
           </div>
         </div>
       </div>
-      <div className="thumb-left">
+      {/* <div className="thumb-left">
         <Image src={one} alt="Image" priority />
-      </div>
-      <div className="thumb-right">
+      </div> */}
+      {/* <div className="thumb-right">
         <Image src={two} alt="Image" priority />
-      </div>
+      </div> */}
     </section>
   );
 };

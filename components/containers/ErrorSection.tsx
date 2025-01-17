@@ -11,8 +11,7 @@ const ErrorSection = () => {
                 Oops! Page Not Found
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                This page is under development! Please try again later.
               </p>
               <div className="section__cta">
                 <Link href="/" className="btn btn--primary">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import thumb from "@/public/images/contact/thumb.png";
+import thumb from "@/public/images/cntus.png";
 import mail from "@/public/images/contact/mail.png";
 import phone from "@/public/images/contact/phone.png";
 import location from "@/public/images/contact/location.png";
@@ -18,13 +18,8 @@ const ContactSection = () => {
               <div className="content">
                 <h3>Email</h3>
                 <p>
-                  <Link href="mailto:alma.lawson@example.com">
-                    alma.lawson@example.com
-                  </Link>
-                </p>
-                <p>
-                  <Link href="mailto:michael.mitc@example.com">
-                    michael.mitc@example.com
+                  <Link href="mailto:smashbrosplay6@gmail.com">
+                    smashbrosplay6@gmail.com
                   </Link>
                 </p>
               </div>
@@ -38,10 +33,7 @@ const ContactSection = () => {
               <div className="content">
                 <h3>Phone</h3>
                 <p>
-                  <Link href="tel:219-555-0114">(480) 555-0103</Link>
-                </p>
-                <p>
-                  <Link href="tel:219-555-0114">(219) 555-0114</Link>
+                  <Link href="tel:219-555-0114">(+94) 713080226</Link>
                 </p>
               </div>
             </div>
@@ -52,10 +44,10 @@ const ContactSection = () => {
                 <Image src={location} alt="Image" priority />
               </div>
               <div className="content">
-                <h3>Location</h3>
+                <h3>Website</h3>
                 <p>
-                  <Link href="tel:219-555-0114" target="_blank">
-                    4517 Washington Ave. Manchester, Kentucky 39495
+                  <Link href="https://smashbrosplay.com" target="_blank">
+                    www.smashbrosplay.com
                   </Link>
                 </p>
               </div>
@@ -66,7 +58,7 @@ const ContactSection = () => {
           <div className="col-12 col-lg-6 col-xl-6">
             <div className="m-contact__form">
               <h3 className="title-animation fw-7 text-white text-uppercase mt-12">
-                PLEASE MESSAGE ME, IF YOU HAVE ANY QUERIES
+                PLEASE MESSAGE US, IF YOU HAVE ANY QUERIES
               </h3>
               <form action="#" method="post">
                 <div className="input-single">

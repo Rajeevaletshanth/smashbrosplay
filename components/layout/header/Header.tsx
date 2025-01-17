@@ -79,7 +79,7 @@ const Header = () => {
                 <nav className="navbar p-0">
                   <div className="navbar__logo">
                     <Link href="/" aria-label="home page" title="logo">
-                      <Image src={logoSrc} alt="Image" priority width={90}/>
+                      <Image src={logoSrc} alt="Image" priority width={100}/>
                     </Link>
                   </div>
                   <div className="navbar__menu">
@@ -116,14 +116,14 @@ const Header = () => {
                         <i className="bi bi-grid-3x3-gap"></i>
                       </button>
                     </div>
-                    {/* <button
+                    <button
                       className="open-mobile-menu d-flex d-xl-none"
                       onClick={() => setIsMenuOpen(!isMenuOpen)}
                       aria-label="toggle mobile menu"
                       title="open mobile menu"
                     >
                       <i className="material-symbols-outlined">menu_open</i>
-                    </button> */}
+                    </button>
                   </div>
                 </nav>
               </div>

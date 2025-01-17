@@ -25,7 +25,7 @@ const FooterTwo = () => {
                 <div className="col-12 col-lg-7 col-xl-8">
                   <div className="footer-cmn__left text-center text-lg-start">
                     <Link href="/" className="logo">
-                      <Image src={Logo} alt="Image" priority width={130}/>
+                      <Image src={Logo} alt="Image" priority width={120}/>
                     </Link>
                     <div className="footer__nav-list">
                       <ul className="justify-content-center justify-content-lg-start">
