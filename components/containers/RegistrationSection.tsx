@@ -22,7 +22,7 @@ const RegistrationSection = () => {
   const [teamName, setTeamName] = useState("")
   const [captainName, setCaptainName] = useState("")
   const [partnerName, setPartnerName] = useState("")
-  const [secretCode, setSecretCode] = useState("xrvR5Ladb1")
+  const [secretCode, setSecretCode] = useState("")
   const [selectedMascot, setSelectedMascot] = useState<any>(null)
   const [data, setData] = useState<any>(null)
 
