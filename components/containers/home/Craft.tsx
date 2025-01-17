@@ -7,22 +7,13 @@ import Shape from "@/public/images/footer/shape-one.png";
 import { useEffect, useState } from "react";
 
 const Craft = () => {
-  const [width, setWidth] = useState((window as any).innerWidth);
+  const [width, setWidth] = useState(0);
 
-  // useEffect(() => {
-  //   // Function to update the width
-  //   const handleResize = () => {
-  //     setWidth(window.innerWidth);
-  //   };
-
-  //   // Add event listener on mount
-  //   window.addEventListener('resize', handleResize);
-
-  //   // Cleanup event listener on unmount
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setWidth(window.innerWidth);
+    }
+  }, []);
 
   return (
     <section className="section craft" id="scrollPosition">
