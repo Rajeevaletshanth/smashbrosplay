@@ -7,7 +7,7 @@ import Shape from "@/public/images/footer/shape-one.png";
 import { useEffect, useState } from "react";
 
 const Craft = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState((window as any).innerWidth);
 
   // useEffect(() => {
   //   // Function to update the width
