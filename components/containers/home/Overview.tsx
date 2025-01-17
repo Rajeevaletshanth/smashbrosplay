@@ -46,7 +46,7 @@ const Overview = () => {
               <div className="overview__content">
                 <h4>Join the Crew</h4>
                 <p className="tertiary-text">
-                  Whether you're smashing shuttles or just here for the vibes, there's always room for more.
+                  Whether you&apos;re smashing shuttles or just here for the vibes, there&apos;s always room for more.
                 </p>
               </div>
             </div>
