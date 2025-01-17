@@ -51,20 +51,19 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Aikeu | Artificial Neural Network AI React NextJs Template",
-  description: "Artificial Neural Network AI React NextJs Template",
+  title: "SmashBros",
+  description: "SmashBros official website",
   keywords: [
-    "Artificial",
-    "Ai",
-    "Network",
-    "Javascript",
-    "Typescript",
-    "React",
-    "nextjs",
+    "Badminton",
+    "SmashBros",
+    "smashbros",
+    "shuttle",
+    "SmashBrosPlay",
+    "smashbrosplay"
   ],
   authors: [
     {
-      name: "Pixelaxis",
+      name: "Alexy",
       url: "https://themeforest.net/user/pixelaxis",
     },
   ],

@@ -83,7 +83,7 @@ const FooterFour = () => {
                     <p>
                       Copyright &copy;{" "}
                       <span id="copyrightYear">{currentYear}</span>{" "}
-                      <Link href="/">Aikeu</Link>. All Rights Reserved
+                      <Link href="/">SmashBros</Link>. All Rights Reserved
                     </p>
                   </div>
                 </div>
