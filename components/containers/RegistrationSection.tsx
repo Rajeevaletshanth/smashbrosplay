@@ -90,7 +90,7 @@ const RegistrationSection = () => {
   }
 
   return (
-    <section className="section m-contact fade-wrapper">
+    <section className=" m-contact fade-wrapper">
       <div className="container">
         <div className="row gaper align-items-center">
 
