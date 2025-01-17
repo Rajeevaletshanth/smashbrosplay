@@ -129,7 +129,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          {/* <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} /> */}
+          <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
       </header>
       {/* <SidebarCart isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />

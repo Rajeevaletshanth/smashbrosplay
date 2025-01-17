@@ -56,7 +56,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }: MobileMenuProps) => {
           <div className="mobile-menu__header nav-fade">
             <div className="logo">
               <Link href="/" aria-label="home page" title="logo">
-                <Image src={logoSrc} alt="Image" priority />
+                <Image src={logoSrc} alt="Image" priority width={100}/>
               </Link>
             </div>
             <button
