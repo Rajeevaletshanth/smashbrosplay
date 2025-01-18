@@ -78,7 +78,7 @@ const RegistrationSection = () => {
         fav_mascot: mascot
       })
       if (response.data.response === "success") {
-
+        getData(secretCode)
       } else {
         setError(response.data.message)
       }
@@ -232,6 +232,11 @@ const RegistrationSection = () => {
                             <button type="button" onClick={handleSubmit} disabled={loading || !captainName || !partnerName || !teamName || !secretCode} className={`btn btn--primary ${loading ? 'btn--loading' : ''}`} >
                               {loading ? 'Registering' : data ? 'Update Now' : 'Register Now'}
                             </button>
+                          </div>}
+                          {data && <div className="section__content-cta">
+                            <a type="button" href="teams" className={`btn btn--primary`} >
+                              Check Registered Teams
+                            </a>
                           </div>}
                           {error && <div className="p-4 mt-3 rounded-xl" style={{ backgroundColor: '#dc3545', borderRadius: '10px', color: 'white' }}>
                             {error}
