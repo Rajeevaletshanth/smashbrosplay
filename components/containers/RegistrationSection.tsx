@@ -127,7 +127,7 @@ const RegistrationSection = () => {
 
                       <div className="authentication__inner">
                         <h3 className="title-animation fw-7 text-white text-uppercase mt-12">
-                          REGISTER YOUR TEAM DETAILS
+                          {data ? 'TEAM REGISTERED SUCCESSFULLY' : 'REGISTER YOUR TEAM DETAILS'}
                         </h3>
 
                         <form action="#" method="post">
@@ -142,6 +142,7 @@ const RegistrationSection = () => {
                                 value={captainName}
                                 onChange={(e: any) => setCaptainName(e.target.value)}
                                 required
+                                disabled={data}
                               />
                               <span className="material-symbols-outlined">
                                 person
@@ -159,6 +160,7 @@ const RegistrationSection = () => {
                                 placeholder="Partner&apos;s Name"
                                 onChange={(e: any) => setPartnerName(e.target.value)}
                                 required
+                                disabled={data}
                               />
                               <span className="material-symbols-outlined">
                                 handshake
@@ -176,6 +178,7 @@ const RegistrationSection = () => {
                                 value={teamName}
                                 onChange={(e: any) => setTeamName(e.target.value)}
                                 required
+                                disabled={data}
                               />
                               <span className="material-symbols-outlined">
                                 sports
@@ -198,6 +201,7 @@ const RegistrationSection = () => {
                                 id="createPassword"
                                 value={secretCode}
                                 placeholder="Enter Secret"
+                                disabled={data}
                                 onChange={(e: any) => setSecretCode(e.target.value)}
                                 required
                               />
@@ -214,20 +218,21 @@ const RegistrationSection = () => {
                                 placeholder="Select or Enter your favourite mascot (Optional)"
                                 required
                                 value={mascot}
+                                disabled={data}
                                 onChange={(e: any) => setMascot(e.target.value)}
                               />
                               <span className="material-symbols-outlined">
                                 swords
                               </span>
                             </div>
-                            <MascotSelection opened={opened} setMascot={setMascot} />
+                            { !data && <MascotSelection opened={opened} setMascot={setMascot} />}
                           </div>
 
-                          <div className="section__content-cta">
+                          {!data && <div className="section__content-cta">
                             <button type="button" onClick={handleSubmit} disabled={loading || !captainName || !partnerName || !teamName || !secretCode} className={`btn btn--primary ${loading ? 'btn--loading' : ''}`} >
                               {loading ? 'Registering' : data ? 'Update Now' : 'Register Now'}
                             </button>
-                          </div>
+                          </div>}
                           {error && <div className="p-4 mt-3 rounded-xl" style={{ backgroundColor: '#dc3545', borderRadius: '10px', color: 'white' }}>
                             {error}
                           </div>}
