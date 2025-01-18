@@ -51,9 +51,9 @@ const TeamCraft = ({ no, name, players, rank, logo, color }: any) => {
           </div>
         </div>
       </div>
-      <div className="anime-one">
+      {/* <div className="anime-one">
         <Image src={Shape} alt="Image" priority />
-      </div>
+      </div> */}
     </section>
   );
 };
