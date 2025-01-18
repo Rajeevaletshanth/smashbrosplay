@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
-const AboutTextSlider = () => {
+const AboutTextSlider = ({text = 'SMASH CLASH'} : any) => {
   return (
     <section className="text-slider-large-wrapper alter-text-large " style={{ paddingTop:'10px'}}>
       <Swiper
@@ -22,45 +22,45 @@ const AboutTextSlider = () => {
       >
         <SwiperSlide>
           <div className="text-slider__single">
-            <h2 className="large-title">SMASH CLASH</h2>
+            <h2 className="large-title" >{text}</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-slider__single">
             <h2 className="large-title">
-              <span className="text-stroke" data-text="SMASH CLASH">
+              <span className="text-stroke"  data-text={text}>
                 {" "}
-                SMASH CLASH
+                {text}
               </span>
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-slider__single">
-            <h2 className="large-title">SMASH CLASH</h2>
+            <h2 className="large-title" >{text}</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-slider__single">
             <h2 className="large-title">
-              <span className="text-stroke" data-text="SMASH CLASH">
+              <span className="text-stroke" data-text={text}>
                 {" "}
-                SMASH CLASH
+                {text}
               </span>
             </h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-slider__single">
-            <h2 className="large-title">SMASH CLASH</h2>
+            <h2 className="large-title" >{text}</h2>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-slider__single">
             <h2 className="large-title">
-              <span className="text-stroke" data-text="SMASH CLASH">
+              <span className="text-stroke" data-text={text}>
                 {" "}
-                SMASH CLASH
+                {text}
               </span>
             </h2>
           </div>

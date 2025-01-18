@@ -18,28 +18,31 @@ import HomeFiveBanner from "@/components/layout/banner/HomeFiveBanner";
 import HomeSevenBanner from "@/components/layout/banner/HomeSevenBanner";
 import FooterFour from "@/components/layout/footer/FooterFour";
 import CommonBanner from "@/components/layout/banner/CommonBanner";
+import HomeSixBanner from "@/components/layout/banner/HomeSixBanner";
+import TeamBanner from "@/components/layout/banner/TeamBanner";
+import HomeBanner from "@/components/layout/banner/HomeBanner";
 
 const page = () => {
   return (
-    <div className="my-app">
+    <div className="">
       <Header />
       <main>
-        {/* <AboutBanner /> */}
-        <HomeSevenBanner />
-        {/* <CommonBanner title="Tournaments" /> */}
-        <AboutTextSlider />
+        <HomeSevenBanner title="Teams"/>
+        {/* <CommonBanner title="Teams" /> */}
+        <AboutTextSlider text="TEAMS"/>
+        <TeamBanner />
         {/* <AboutPoster /> */}
-        <AboutCraft />
+        {/* <AboutCraft /> */}
         {/* <AboutOverview />
         <AboutTool />
         <Sponsor />
         <Review /> */}
-        <div style={{padding:'100px'}}></div>
+        {/* <div style={{padding:'100px'}}></div> */}
       </main>
-      <FooterFour />
+      {/* <FooterFour />
       <InitCustomCursor />
       <ScrollProgressButton />
-      <Animations />
+      <Animations /> */}
     </div>
   );
 };

@@ -29,6 +29,9 @@ const FooterFour = () => {
                       <Link href="tournaments">Tournaments</Link>
                       </li>
                       <li>
+                      <Link href="teams">Teams</Link>
+                      </li>
+                      <li>
                         <Link href="contact-us">Contact Us</Link>
                       </li>
                     </ul>

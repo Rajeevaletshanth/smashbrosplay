@@ -8,6 +8,10 @@ const NavbarData = [
     path: "/tournaments",
   },
   {
+    title: "Teams",
+    path: "/teams",
+  },
+  {
     title: "Contact Us",
     path: "/contact-us",
   },
