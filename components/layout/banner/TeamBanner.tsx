@@ -8,6 +8,9 @@ import codeRedLogo from "@/public/images/teams/logo/Code Red.png";
 import darkRogersBanner from "@/public/images/teams/banners/Dark Rogers Banner.jpg";
 import darkRogersLogo from "@/public/images/teams/logo/Dark Rogers.png";
 
+import teamBaddiesBanner from "@/public/images/teams/banners/Team Baddies Banner.jpg";
+import teamBaddiesLogo from "@/public/images/teams/logo/Team Baddies.png";
+
 import Image from 'next/image';
 import AboutCraft from '@/components/containers/about/AboutCraft';
 import TeamCraft from '@/components/containers/about/TeamCraft';
@@ -55,6 +58,19 @@ const TeamBanner = () => {
           
       </div>
       <TeamCraft no={3} name={'Dark Rogers'} players="Maxwel / Premthas" rank={'N/A'} logo={darkRogersLogo} color='#712ebe'/>
+      </>
+      <>
+      <AboutTextSlider text="TEAM BADDIES"/>
+      <div className=" parallax-img text-center">
+        <Image
+          src={teamBaddiesBanner}
+          alt="Team Banner"
+          priority
+          layout="responsive"
+        />
+          
+      </div>
+      <TeamCraft no={4} name={'Team Baddies'} players="Bona / Thusyanthan" rank={'N/A'} logo={teamBaddiesBanner} color='#d62750'/>
       </>
     </section>
   );
