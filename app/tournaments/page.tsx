@@ -27,13 +27,13 @@ const page = () => {
         {/* <AboutBanner /> */}
         <HomeSevenBanner />
         {/* <CommonBanner title="Tournaments" /> */}
-        <AboutTextSlider />
+        <Sponsor />
+        {/* <AboutTextSlider /> */}
         {/* <AboutPoster /> */}
         <AboutCraft />
         {/* <AboutOverview />
-        <AboutTool />
-        <Sponsor />
-        <Review /> */}
+        <AboutTool /> */}
+        {/* <Review /> */}
         <div style={{padding:'100px'}}></div>
       </main>
       <FooterFour />
