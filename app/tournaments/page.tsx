@@ -18,6 +18,7 @@ import HomeFiveBanner from "@/components/layout/banner/HomeFiveBanner";
 import HomeSevenBanner from "@/components/layout/banner/HomeSevenBanner";
 import FooterFour from "@/components/layout/footer/FooterFour";
 import CommonBanner from "@/components/layout/banner/CommonBanner";
+import PointsTable from "@/components/containers/pointsTable/PointsTable";
 
 const page = () => {
   return (
@@ -30,6 +31,7 @@ const page = () => {
         <Sponsor />
         {/* <AboutTextSlider /> */}
         {/* <AboutPoster /> */}
+        <PointsTable />
         <AboutCraft />
         {/* <AboutOverview />
         <AboutTool /> */}
