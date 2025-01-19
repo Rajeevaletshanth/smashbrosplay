@@ -40,7 +40,7 @@ const TeamCraft = ({ no, name, players, rank, logo, color }: any) => {
               {/* </div> */}
             </div>
           </div>
-          <div className="col-12 col-lg-6 col-xxl-7">
+          {/* <div className="col-12 col-lg-6 col-xxl-7">
             <div className="craft__thumb text-start text-lg-end">
               <div className="reveal-img parallax-img">
                 <div className="reveal-img parallax-img">
@@ -48,7 +48,8 @@ const TeamCraft = ({ no, name, players, rank, logo, color }: any) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <div style={{marginBottom:'100px'}}></div>
         </div>
       </div>
       {/* <div className="anime-one">
