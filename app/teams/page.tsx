@@ -30,7 +30,7 @@ const page = () => {
         <HomeSevenBanner title="Teams" description="Smash Clash Tournament features top teams, each bringing their unique skills and passion to the court in a thrilling battle for the championship."/>
         {/* <CommonBanner title="Teams" /> */}
         {/* <AboutTextSlider text="TEAMS"/> */}
-        <Sponsor />
+        <Sponsor color="bg-black"/>
         <TeamBanner />
         {/* <AboutPoster /> */}
         {/* <AboutCraft /> */}

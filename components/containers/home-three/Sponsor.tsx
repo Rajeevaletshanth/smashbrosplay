@@ -9,9 +9,9 @@ import team2 from "@/public/images/teams/logo/Code Red.png";
 import team3 from "@/public/images/teams/logo/Dark Rogers.png";
 import team4 from "@/public/images/teams/logo/Team Baddies.png";
 
-const Sponsor = () => {
+const Sponsor = ({color}:any) => {
   return (
-    <div className="sponsor section overflow-hidden">
+    <div className={`sponsor  overflow-hidden pt-5 ${color && color}` }>
       <Swiper
         slidesPerView={2}
         spaceBetween={24}
@@ -26,7 +26,7 @@ const Sponsor = () => {
         }}
         className="sponsor__slider"
         breakpoints={{
-          1200: {
+          1190: {
             slidesPerView: 6,
           },
           992: {
@@ -39,98 +39,98 @@ const Sponsor = () => {
       >
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team1} alt="Image" priority width={200} />
+            <Image src={team1} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team2} alt="Image" priority width={200} />
+            <Image src={team2} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team3} alt="Image" priority width={200} />
+            <Image src={team3} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team4} alt="Image" priority width={200} />
+            <Image src={team4} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team1} alt="Image" priority width={200} />
+            <Image src={team1} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team2} alt="Image" priority width={200} />
+            <Image src={team2} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team3} alt="Image" priority width={200} />
+            <Image src={team3} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team4} alt="Image" priority width={200} />
+            <Image src={team4} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team3} alt="Image" priority width={200} />
+            <Image src={team3} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team4} alt="Image" priority width={200} />
+            <Image src={team4} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team1} alt="Image" priority width={200} />
+            <Image src={team1} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team2} alt="Image" priority width={200} />
+            <Image src={team2} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team3} alt="Image" priority width={200} />
+            <Image src={team3} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team4} alt="Image" priority width={200} />
+            <Image src={team4} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team4} alt="Image" priority width={200} />
+            <Image src={team4} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team1} alt="Image" priority width={200} />
+            <Image src={team1} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team2} alt="Image" priority width={200} />
+            <Image src={team2} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team3} alt="Image" priority width={200} />
+            <Image src={team3} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sponsor__single text-center">
-            <Image src={team4} alt="Image" priority width={200} />
+            <Image src={team4} alt="Image" priority width={190} />
           </div>
         </SwiperSlide>
       </Swiper>
