@@ -957,7 +957,7 @@
 
 // 5.15 review styles
 .review {
-  background-color: #120f23;
+  // background-color: #120f23;
   position: relative;
   z-index: 1;
   overflow-x: clip;
@@ -981,6 +981,67 @@
     border: 1px solid #ffffff4d;
   }
 
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .league, .match-number {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .review__meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .thumb h5 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .vs-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+
+  .score-boxes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .score-box {
+    width: 40px;
+    height: 40px;
+    background-color: #f1f1f1;
+    // border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  
+  .match-details {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
   .review__meta {
     display: flex;
     align-items: center;
@@ -989,8 +1050,8 @@
     margin-top: 30px;
 
     .thumb {
-      width: 60px;
-      height: 60px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       img {
         width: 100%;

@@ -19,6 +19,8 @@ import HomeSevenBanner from "@/components/layout/banner/HomeSevenBanner";
 import FooterFour from "@/components/layout/footer/FooterFour";
 import CommonBanner from "@/components/layout/banner/CommonBanner";
 import PointsTable from "@/components/containers/pointsTable/PointsTable";
+import Fixtures from "@/components/containers/home-two/Fixtures";
+import Results from "@/components/containers/home-two/Results";
 
 const page = () => {
   return (
@@ -31,11 +33,12 @@ const page = () => {
         <Sponsor />
         {/* <AboutTextSlider /> */}
         {/* <AboutPoster /> */}
-        <PointsTable />
         <AboutCraft />
+        <PointsTable />
         {/* <AboutOverview />
         <AboutTool /> */}
-        {/* <Review /> */}
+        <Fixtures />
+        <Results />
         <div style={{padding:'100px'}}></div>
       </main>
       <FooterFour />

@@ -13,7 +13,7 @@ const Review = () => {
   const isAbout = pathname === "/about-us" || pathname === "/services";
 
   return (
-    <section className={`section review ${isAbout ? " lilu-review" : ""}`}>
+    <section id="review" className={`section review ${isAbout ? " lilu-review" : ""}`}>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-lg-5">

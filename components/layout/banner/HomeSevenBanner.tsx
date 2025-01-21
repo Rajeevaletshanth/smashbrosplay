@@ -19,7 +19,7 @@ const HomeSevenBanner = ({title = 'Tournaments', description = 'Experience the p
                 <h1 className="title-animation fw-9">
                   {title}
                 </h1>
-                <div className="banner-seven__group">
+                {/* <div className="banner-seven__group"> */}
                   {/* <div className="thumb">
                     <Image src={one} alt="Image" priority />
                     <button
@@ -37,12 +37,12 @@ const HomeSevenBanner = ({title = 'Tournaments', description = 'Experience the p
                     {description}
                     </p>
                   </div>
-                </div>
-                <div className="section__cta text-start">
+                {/* </div> */}
+                {/* <div className="section__cta text-start"> */}
                   {/* <Link href="sign-in" className="btn btn--primary">
                     Get Started
                   </Link> */}
-                </div>
+                {/* </div> */}
               </div>
               {/* <Link className="scroll-position-btn" href="#scrollPosition">
                 <Image src={frame} alt="Image" priority />
