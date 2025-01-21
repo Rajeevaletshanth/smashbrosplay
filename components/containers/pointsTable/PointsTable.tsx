@@ -24,7 +24,7 @@ const PointTable: React.FC = () => {
     const [data, setData] = useState<any>([])
     const fetchPoints = async() => {
         try {
-            const response:any = await axios.get('http://51.21.108.179:5001/sbplay/getAll')
+            const response:any = await axios.get('https://api.brexe.com/sbplay/getAll')
             if(response.data.response === 'success'){
                 let tempData :any = response.data.data;
                 let datat:any = []

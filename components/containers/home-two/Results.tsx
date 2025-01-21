@@ -17,7 +17,7 @@ const Results = () => {
   const [data, setData] = useState<any>(null)
   const fetchData = async () => {
     try {
-      const response: any = await axios.get('http://51.21.108.179:5001/matches/getAll')
+      const response: any = await axios.get('https://api.brexe.com/matches/getAll')
       if (response.data.response === 'success') {
         let tdata: any = [];
         response.data.matches.map((item: any) => {
