@@ -82,8 +82,8 @@ const Fixtures = () => {
               }}
               className="review__slider"
             >
-              {data?.map((item: any) =>
-                <SwiperSlide>
+              {data?.map((item: any, key:any) =>
+                <SwiperSlide key={key}>
                   <div className="review__slider-single">
                     <div className="card-header">
                       <p className=" px-2 rounded text-black bg-white" style={{ fontSize: 12, fontWeight: 600 }}>{item.match_type}</p>
