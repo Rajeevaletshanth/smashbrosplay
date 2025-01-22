@@ -28,7 +28,7 @@ const PointTable: React.FC = () => {
                         lost: item.losts,
                         matchesWin: item.games_win,
                         matchesPlayed: item.matches_played, 
-                        points: item.points, 
+                        points: item.points * 2, 
                         winMatchRatio: (item.matches_played === 0 || item.games_win === 0) ? 0 : item.games_win/item.matches_played
                     })
                 })

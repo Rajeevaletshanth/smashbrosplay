@@ -132,7 +132,7 @@ const Results = () => {
                             item.team_2 === 'Dark Rogers' ? DRogers :
                               item.team_2 === 'Smashers' ? Smashers :
                                 item.team_2 === 'Team Baddies' ? TBaddies :
-                                  item.team_1 === 'Venpura' ? Venpura :
+                                  item.team_2 === 'Venpura' ? Venpura :
                                   Titans
                         } alt={item.team_2} priority />
                         <h5 style={{ whiteSpace: 'nowrap' }}>{item.team_2}</h5>
