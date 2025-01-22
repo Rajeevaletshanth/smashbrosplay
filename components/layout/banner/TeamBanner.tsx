@@ -14,6 +14,9 @@ import teamBaddiesLogo from "@/public/images/teams/logo/Team Baddies.png";
 import smashersBanner from "@/public/images/teams/banners/Smashers Banner.jpg";
 import smashersLogo from "@/public/images/teams/logo/Smashers.png";
 
+import venpuraBanner from "@/public/images/teams/banners/Venpura Banner.jpg";
+import venpuraLogo from "@/public/images/teams/logo/Venpura.png";
+
 import Image from 'next/image';
 import AboutCraft from '@/components/containers/about/AboutCraft';
 import TeamCraft from '@/components/containers/about/TeamCraft';
@@ -86,7 +89,20 @@ const TeamBanner = () => {
         />
           
       </div>
-      <TeamCraft no={5} name={'Smashers'} players="Diron / Grasian" rank={'N/A'} logo={smashersLogo} color='#7103a4'/>
+      <TeamCraft no={5} name={'Smashers'} players="Diron / Dilushan" rank={'N/A'} logo={smashersLogo} color='#7103a4'/>
+      </>
+      <>
+      <AboutTextSlider text="VENPURA"/>
+      <div className=" parallax-img text-center">
+        <Image
+          src={venpuraBanner}
+          alt="Team Banner"
+          priority
+          layout="responsive"
+        />
+          
+      </div>
+      <TeamCraft no={6} name={'Venpura'} players="Kathires / Kumar" rank={'N/A'} logo={venpuraLogo} color='#ffffff'/>
       </>
     </section>
   );

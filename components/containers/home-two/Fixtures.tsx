@@ -9,6 +9,7 @@ import Titans from "@/public/images/teams/logo/Titans.png";
 import TBaddies from "@/public/images/teams/logo/Team Baddies.png";
 import Smashers from "@/public/images/teams/logo/Smashers.png";
 import DRogers from "@/public/images/teams/logo/Dark Rogers.png";
+import Venpura from "@/public/images/teams/logo/Venpura.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -96,6 +97,7 @@ const Fixtures = () => {
                             item.team_1 === 'Dark Rogers' ? DRogers :
                               item.team_1 === 'Smashers' ? Smashers :
                                 item.team_1 === 'Team Baddies' ? TBaddies :
+                                  item.team_1 === 'Venpura' ? Venpura :
                                   Titans
                         } alt={item.team_1} priority />
                         <h5  style={{ whiteSpace: 'nowrap' }}>{item.team_1}</h5>
@@ -107,6 +109,7 @@ const Fixtures = () => {
                             item.team_2 === 'Dark Rogers' ? DRogers :
                               item.team_2 === 'Smashers' ? Smashers :
                                 item.team_2 === 'Team Baddies' ? TBaddies :
+                                  item.team_2 === 'Venpura' ? Venpura :
                                   Titans
                         } alt={item.team_2} priority />
                         <h5 style={{ whiteSpace: 'nowrap' }}>{item.team_2}</h5>

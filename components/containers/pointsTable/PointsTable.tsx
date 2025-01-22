@@ -8,17 +8,9 @@ import codeRed from "@/public/images/teams/logo/Code Red.png";
 import darkRogers from "@/public/images/teams/logo/Dark Rogers.png";
 import teamBaddies from "@/public/images/teams/logo/Team Baddies.png";
 import titans from "@/public/images/teams/logo/Titans.png";
+import venpura from "@/public/images/teams/logo/Venpura.png";
 import axios from 'axios';
 
-
-const teams: any[] = [
-    { name: 'Code Red', logo: codeRed, played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 },
-    { name: 'Dark Rogers', logo: darkRogers, played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 },
-    { name: 'Smashers', played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 },
-    { name: 'Team Baddies', logo: teamBaddies, played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 },
-    { name: 'Titans', logo: titans, played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 },
-    { name: 'Team 6', played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 },
-];
 
 const PointTable: React.FC = () => {
     const [data, setData] = useState<any>([])
