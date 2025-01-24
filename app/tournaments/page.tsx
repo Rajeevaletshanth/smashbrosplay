@@ -43,7 +43,7 @@ const page = () => {
       </main>
       <FooterFour />
       <InitCustomCursor />
-      <ScrollProgressButton />
+      {/* <ScrollProgressButton /> */}
       <Animations />
     </div>
   );
