@@ -68,10 +68,10 @@ const PointTable: React.FC = () => {
                             <th className='text-black'>P</th>
                             <th className='text-black'>W</th>
                             <th className='text-black'>L</th>
-                            <th className='text-black'>MW</th>
-                            <th className='text-black'>MP</th>
+                            <th className='text-black'>SW</th>
+                            <th className='text-black'>SP</th>
                             <th className='text-black'>Pts</th>
-                            <th className='text-black'>MW/MP Ratio</th>
+                            <th className='text-black'>SW/SP Ratio</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,7 +86,7 @@ const PointTable: React.FC = () => {
                                     className='mr-4'
                                     width={30}
                                 /> */}
-                                {team.team}</td>
+                                {team.team} {team.qualified && <span style={{color:'black', backgroundColor:'rgb(0, 255, 89)', paddingRight:5,  paddingLeft:5, marginLeft:5, borderRadius:4, fontWeight:500, fontSize:15}}>Q</span>}</td>
                                 <td>{team.played}</td>
                                 <td>{team.won}</td>
                                 <td>{team.lost}</td>
