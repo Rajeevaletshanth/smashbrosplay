@@ -26,6 +26,7 @@ const PointTable: React.FC = () => {
                         played: item.played,
                         won: item.wins, 
                         lost: item.losts,
+                        qualified: item.qualified,
                         matchesWin: item.games_win,
                         matchesPlayed: item.matches_played, 
                         points: item.points * 2, 
@@ -75,7 +76,7 @@ const PointTable: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((team:any, index:number) => (
+                        {data?.map((team:any, index:number) => (
                             <tr key={index} >
                                 <td>{index + 1}</td>
                                 <td style={{ textAlign: 'left' }}>
@@ -86,7 +87,9 @@ const PointTable: React.FC = () => {
                                     className='mr-4'
                                     width={30}
                                 /> */}
-                                {team.team} {team.qualified && <span style={{color:'black', backgroundColor:'rgb(0, 255, 89)', paddingRight:5,  paddingLeft:5, marginLeft:5, borderRadius:4, fontWeight:500, fontSize:15}}>Q</span>}</td>
+                                {team.team} 
+                                {team.qualified && <span style={{color:'black', backgroundColor:'rgb(0, 255, 89)', paddingRight:5,  paddingLeft:5, marginLeft:5, borderRadius:4, fontWeight:500, fontSize:15}}>Q</span>}
+                                </td>
                                 <td>{team.played}</td>
                                 <td>{team.won}</td>
                                 <td>{team.lost}</td>
