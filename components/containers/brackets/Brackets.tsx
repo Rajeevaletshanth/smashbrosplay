@@ -6,7 +6,7 @@ import Link from "next/link";
 import CraftThumb from "@/public/images/smashclash.jpg";
 import Shape from "@/public/images/footer/shape-one.png";
 import { useEffect, useState, useRef } from "react";
-import bgimg from '@/public/images/RTFLines.png'
+import bgimg from '@/public/images/RTFLines2.png'
 
 const teamArray = [
   {
@@ -116,9 +116,9 @@ const Brackets = () => {
               <h2 className="title title-animation">
                 Playoffs
               </h2>
-              {/* <p>
-                Tournament Brackets.
-              </p> */}
+              <p>
+                Smash Clash Playoffs Bracket – The official tournament bracket for the intense battles leading to the championship.
+              </p>
               {/* <div className="section__content-cta">
                 <Link href="tournaments" className="btn btn--primary">
                   Get started
@@ -128,7 +128,7 @@ const Brackets = () => {
           </div>
 
           <div className="">
-            <Image alt='Bg' src={bgimg}  />
+            <Image alt='Bg' src={bgimg} />
           </div>
         </div>
       </div>
