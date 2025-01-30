@@ -21,6 +21,7 @@ import CommonBanner from "@/components/layout/banner/CommonBanner";
 import PointsTable from "@/components/containers/pointsTable/PointsTable";
 import Fixtures from "@/components/containers/home-two/Fixtures";
 import Results from "@/components/containers/home-two/Results";
+import Brackets from "@/components/containers/brackets/Brackets";
 
 const page = () => {
   return (
@@ -35,6 +36,7 @@ const page = () => {
         {/* <AboutPoster /> */}
         <AboutCraft />
         <PointsTable />
+        <Brackets />
         {/* <AboutOverview />
         <AboutTool /> */}
         <Fixtures />
