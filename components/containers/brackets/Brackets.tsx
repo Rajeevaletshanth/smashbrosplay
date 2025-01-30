@@ -6,8 +6,6 @@ import Link from "next/link";
 import CraftThumb from "@/public/images/smashclash.jpg";
 import Shape from "@/public/images/footer/shape-one.png";
 import { useEffect, useState, useRef } from "react";
-import VersusCard from "./components/VersusCard";
-import "./components/VersusCard.css";
 import bgimg from '@/public/images/RTFLines.png'
 
 const teamArray = [
