@@ -114,11 +114,11 @@ const Brackets = () => {
             <div className="section__content">
               {/* <span className="sub-title">Coming Soon</span> */}
               <h2 className="title title-animation">
-                Road To Final
+                Playoffs
               </h2>
-              <p>
-                The Battle for Greatness Begins.
-              </p>
+              {/* <p>
+                Tournament Brackets.
+              </p> */}
               {/* <div className="section__content-cta">
                 <Link href="tournaments" className="btn btn--primary">
                   Get started
@@ -127,7 +127,7 @@ const Brackets = () => {
             </div>
           </div>
 
-          <div className="mt-4">
+          <div className="">
             <Image alt='Bg' src={bgimg}  />
           </div>
         </div>
