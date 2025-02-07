@@ -35,7 +35,7 @@ const page = () => {
         {/* <Partner /> */}
         {/* <ServiceSlider /> */}
         <UnlockSection />
-        {/* <VideoSection /> */}
+        <VideoSection />
         {/* <GenerationTwo /> */}
         {/* <PricingPlan /> */}
         <BlogOne />

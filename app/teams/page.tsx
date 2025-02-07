@@ -21,6 +21,7 @@ import CommonBanner from "@/components/layout/banner/CommonBanner";
 import HomeSixBanner from "@/components/layout/banner/HomeSixBanner";
 import TeamBanner from "@/components/layout/banner/TeamBanner";
 import HomeBanner from "@/components/layout/banner/HomeBanner";
+import VideoSection from "@/components/containers/home/VideoSection";
 
 const page = () => {
   return (
@@ -30,6 +31,7 @@ const page = () => {
         <HomeSevenBanner title="Teams" description="Smash Clash Tournament features top teams, each bringing their unique skills and passion to the court in a thrilling battle for the championship."/>
         {/* <CommonBanner title="Teams" /> */}
         {/* <AboutTextSlider text="TEAMS"/> */}
+        {/* <VideoSection /> */}
         <Sponsor color="bg-black"/>
         <TeamBanner />
         {/* <AboutPoster /> */}

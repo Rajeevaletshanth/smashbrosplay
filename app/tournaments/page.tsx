@@ -22,6 +22,7 @@ import PointsTable from "@/components/containers/pointsTable/PointsTable";
 import Fixtures from "@/components/containers/home-two/Fixtures";
 import Results from "@/components/containers/home-two/Results";
 import Brackets from "@/components/containers/brackets/Brackets";
+import VideoSection from "@/components/containers/home/VideoSection";
 
 const page = () => {
   return (
@@ -41,6 +42,7 @@ const page = () => {
         <AboutTool /> */}
         <Fixtures />
         <Results />
+        {/* <VideoSection /> */}
         <div style={{padding:'100px'}}></div>
       </main>
       <FooterFour />

@@ -4,19 +4,19 @@ const VideoSection = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="video-s__inner">
+            <div className="">
               <div className="row justify-content-center">
                 <div className="col-12 col-lg-9 col-xxl-7">
                   <div className="section__header text-center">
-                    <h2 className="title mt-0 title-animation">
-                      Ai Image Genaretor
+                    <h2 className="title mt-4 title-animation">
+                      Unveiling Squads
                     </h2>
-                    <p>
+                    {/* <p>
                       By leveraging deep learning algorithms, DeepArt.io
                       analyzes the input image and applies the style
                       characteristics of renowned artworks to generate visually
                       striking compositions.
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
@@ -24,7 +24,7 @@ const VideoSection = () => {
                 <div className="col-12">
                   <div className="video-s__content">
                     <video autoPlay loop muted controls>
-                      <source src="/images/video.mp4" type="video/mp4" />
+                      <source src="/images/TeamsVDO.mp4" type="video/mp4" />
                     </video>
                   </div>
                 </div>
