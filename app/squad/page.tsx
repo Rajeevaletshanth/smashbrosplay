@@ -17,10 +17,10 @@ const page = () => {
       <AboutTextSlider text='SQUAD' />
         <CaseStudySeven/>
       </main>
-      <FooterFour />
-      {/* <InitCustomCursor />
-      <ScrollProgressButton /> */}
+      <InitCustomCursor />
+      <ScrollProgressButton />
       <Animations />
+      <FooterFour />
     </div>
   );
 };
