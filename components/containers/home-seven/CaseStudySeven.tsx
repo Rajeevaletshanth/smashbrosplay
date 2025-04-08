@@ -48,11 +48,12 @@ const CaseStudySeven = () => {
       <div className="h-s-case-wrapper">
         {list?.map((item: any, index: any) => {
           return <div
+          key={index}
             className={
               "h-s-case-single" +
-              (isActive === 0 ? " h-s-case-single-active" : " ")
+              (isActive === index ? " h-s-case-single-active" : " ")
             }
-            onClick={() => setIsActive(0)}
+            onClick={() => setIsActive(index)}
           >
             <div className="thumb">
               <Image src={item?.rank === 'Smash Boss'? SmashBoss : item?.rank === 'OG Shuttler' ? OGShuttler : item?.rank === 'Rookie Bro'? RookiePro : NewBlood} alt="Image" priority />
