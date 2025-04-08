@@ -18,8 +18,8 @@ const page = () => {
         <CaseStudySeven/>
       </main>
       <FooterFour />
-      <InitCustomCursor />
-      <ScrollProgressButton />
+      {/* <InitCustomCursor />
+      <ScrollProgressButton /> */}
       <Animations />
     </div>
   );
