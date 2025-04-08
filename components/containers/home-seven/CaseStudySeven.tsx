@@ -61,7 +61,7 @@ const CaseStudySeven = () => {
             <div className="h-case-content">
               <div className="case-title">
                 <h2 className="light-title">
-                  <Link href="">{item?.username?.toUpperCase()}</Link>
+                  <Link href="#">{item?.username?.toUpperCase()}</Link>
                 </h2>
               </div>
               <div className="h-c-continent">
@@ -79,7 +79,7 @@ const CaseStudySeven = () => {
                         Fresh to the squad, full of promise.
                       </p>
                 }
-                <Link href="" className="cta">
+                <Link href="#" className="cta">
                   <span className="arrow"></span>
                 </Link>
               </div>
