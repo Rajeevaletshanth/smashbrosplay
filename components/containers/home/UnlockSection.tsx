@@ -28,8 +28,8 @@ const UnlockSection = () => {
                 compete for the ultimate racket prize!
               </p>
               <div className="section__content-cta">
-                <Link href="shop" className="btn btn--primary">
-                  Register Now
+                <Link href="" className="btn btn--secondary" aria-disabled>
+                  Registration Closed
                 </Link>
               </div>
             </div>

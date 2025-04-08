@@ -8,8 +8,13 @@ import { useEffect, useState } from "react";
 
 const Craft = () => {
   const [width, setWidth] = useState(1000);
+  const [username,setUsername] = useState<any>(null)
 
   useEffect(() => {
+    const name = localStorage.getItem('username')
+    if(name){
+      setUsername(name)
+    }
     if (typeof window !== 'undefined') {
       setWidth(window.innerWidth);
     }
@@ -30,9 +35,12 @@ const Craft = () => {
                 and plenty of laughs. No pressure, just good vibes and epic moments!
               </p>
               <div className="section__content-cta">
-                <Link href="sign-up" className="btn btn--primary">
-                  Get started
-                </Link>
+              {username ? <Link href="/squad" className="btn btn--primary" style={{fontWeight:700}}>
+                  Meet the Bros
+                </Link>:
+                <Link href="/sign-up" className="btn btn--primary" style={{fontWeight:700}}>
+                  Get Started
+                </Link>}
               </div>
             </div>
           </div>
