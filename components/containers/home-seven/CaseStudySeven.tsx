@@ -6,6 +6,7 @@ import NewBlood from "@/public/images/NewBlood.jpg";
 import RookiePro from "@/public/images/RookiePro.jpg";
 import OGShuttler from "@/public/images/OGShuttler.jpg";
 import SmashBoss from "@/public/images/SmashBoss.jpg";
+import SmashBoss1 from "@/public/images/SmashBoss1.jpg";
 import two from "@/public/images/home-seven/two.png";
 import three from "@/public/images/home-seven/three.png";
 import four from "@/public/images/home-seven/four.png";
@@ -56,7 +57,7 @@ const CaseStudySeven = () => {
             onClick={() => setIsActive(index)}
           >
             <div className="thumb">
-              <Image src={item?.rank === 'Smash Boss'? SmashBoss : item?.rank === 'OG Shuttler' ? OGShuttler : item?.rank === 'Rookie Bro'? RookiePro : NewBlood} alt="Image" priority />
+              <Image src={item?.rank === 'Smash Boss' && index === 0? SmashBoss1 : item?.rank === 'Smash Boss'? SmashBoss : item?.rank === 'OG Shuttler' ? OGShuttler : item?.rank === 'Rookie Bro'? RookiePro : NewBlood} alt="Image" priority />
             </div>
             <div className="h-case-content">
               <div className="case-title">
