@@ -12,6 +12,10 @@ const NavbarData = [
     path: "/teams",
   },
   {
+    title: "Squad",
+    path: "/squad",
+  },
+  {
     title: "Contact Us",
     path: "/contact-us",
   },
