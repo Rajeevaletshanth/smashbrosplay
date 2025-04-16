@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter, usePathname  } from 'next/navigation';
 import axios from "axios";
 
-const ValidateUser = () => {
+const ValidateUser = ({keepPage = false, checkToken = false}:any) => {
     const router = useRouter()
     const pathname = usePathname();
     const validateUser = async (token:any) => {
@@ -14,7 +14,9 @@ const ValidateUser = () => {
                 }
             })
             if(response.data.authenticate){
-                router.push('/')
+                if(!keepPage){
+                    router.push('/')
+                }
             }else{
                 if(!(pathname === '/sign-in' || pathname === '/sign-up')){
                     localStorage.clear();
@@ -31,11 +33,13 @@ const ValidateUser = () => {
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-        console.log(token)
         if(token){
             validateUser(token)
         }else{
             localStorage.clear();
+            if(checkToken){
+                router.push('/sign-in')
+            }
         }
     }, [])
     return (

@@ -33,10 +33,10 @@ const TextSliderLarge = () => {
           <div className="text-slider__single">
             <h2 className="large-title">
               <Link href="services">
-                SMASH
-                <span className="text-stroke" data-text="CLASH">
+                SHUTTLE
+                <span className="text-stroke" data-text="ROYALE">
                   {" "}
-                  CLASH
+                  ROYALE
                 </span>
               </Link>
             </h2>
@@ -46,10 +46,10 @@ const TextSliderLarge = () => {
           <div className="text-slider__single">
             <h2 className="large-title">
               <Link href="services">
-                SMASH
-                <span className="text-stroke" data-text="CLASH">
+                SHUTTLE
+                <span className="text-stroke" data-text="ROYALE">
                   {" "}
-                  CLASH
+                  ROYALE
                 </span>
               </Link>
             </h2>
@@ -59,10 +59,10 @@ const TextSliderLarge = () => {
           <div className="text-slider__single">
             <h2 className="large-title">
               <Link href="services">
-                SMASH
-                <span className="text-stroke" data-text="CLASH">
+                SHUTTLE
+                <span className="text-stroke" data-text="ROYALE">
                   {" "}
-                  CLASH
+                  ROYALE
                 </span>
               </Link>
             </h2>
@@ -72,10 +72,10 @@ const TextSliderLarge = () => {
           <div className="text-slider__single">
             <h2 className="large-title">
               <Link href="services">
-                SMASH
-                <span className="text-stroke" data-text="CLASH">
+                SHUTTLE
+                <span className="text-stroke" data-text="ROYALE">
                   {" "}
-                  CLASH
+                  ROYALE
                 </span>
               </Link>
             </h2>
@@ -85,10 +85,10 @@ const TextSliderLarge = () => {
           <div className="text-slider__single">
             <h2 className="large-title">
               <Link href="services">
-                SMASH
-                <span className="text-stroke" data-text="CLASH">
+                SHUTTLE
+                <span className="text-stroke" data-text="ROYALE">
                   {" "}
-                  CLASH
+                  ROYALE
                 </span>
               </Link>
             </h2>
@@ -98,10 +98,10 @@ const TextSliderLarge = () => {
           <div className="text-slider__single">
             <h2 className="large-title">
               <Link href="services">
-                SMASH
-                <span className="text-stroke" data-text="CLASH">
+                SHUTTLE
+                <span className="text-stroke" data-text="ROYALE">
                   {" "}
-                  CLASH
+                  ROYALE
                 </span>
               </Link>
             </h2>

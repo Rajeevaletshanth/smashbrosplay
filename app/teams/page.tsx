@@ -28,11 +28,11 @@ const page = () => {
     <div className="">
       <Header />
       <main>
-        <HomeSevenBanner title="Teams" description="Smash Clash Tournament features top teams, each bringing their unique skills and passion to the court in a thrilling battle for the championship."/>
+        <HomeSevenBanner title="Teams" description="Shuttle Royale Tournament features top teams, each bringing their unique skills and passion to the court in a thrilling battle for the championship."/>
         {/* <CommonBanner title="Teams" /> */}
         {/* <AboutTextSlider text="TEAMS"/> */}
         {/* <VideoSection /> */}
-        <Sponsor color="bg-black"/>
+        {/* <Sponsor color="bg-black"/> */}
         <TeamBanner />
         {/* <AboutPoster /> */}
         {/* <AboutCraft /> */}

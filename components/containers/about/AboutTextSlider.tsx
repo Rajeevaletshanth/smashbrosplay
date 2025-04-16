@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
-const AboutTextSlider = ({text = 'SMASH CLASH'} : any) => {
+const AboutTextSlider = ({text = 'SHUTTLE ROYALE'} : any) => {
   return (
     <section className="text-slider-large-wrapper alter-text-large " style={{ paddingTop:'10px'}}>
       <Swiper

@@ -32,12 +32,12 @@ const page = () => {
         {/* <AboutBanner /> */}
         <HomeSevenBanner />
         {/* <CommonBanner title="Tournaments" /> */}
-        <Sponsor />
+        {/* <Sponsor /> */}
         {/* <AboutPoster /> */}
         <AboutCraft />
         <PointsTable />
-        <Brackets />
-        <AboutTextSlider text='PLAYOFFS' />
+        {/* <Brackets /> */}
+        {/* <AboutTextSlider text='PLAYOFFS' /> */}
         {/* <AboutOverview />
         <AboutTool /> */}
         <Fixtures />

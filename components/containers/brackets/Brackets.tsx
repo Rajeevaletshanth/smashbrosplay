@@ -42,7 +42,7 @@ const Brackets = () => {
                 Playoffs
               </h2>
               <p>
-                Smash Clash Playoffs Bracket – The official tournament bracket for the intense battles leading to the championship.
+                Shuttle Royale Playoffs Bracket – The official tournament bracket for the intense battles leading to the championship.
               </p>
             </div>
           </div>

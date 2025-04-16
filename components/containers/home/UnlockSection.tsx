@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import unlockThumb from "@/public/images/smashclash.jpg";
+import unlockThumb from "@/public/images/SRPoster.jpg";
 import { useEffect, useState } from "react";
 
 const UnlockSection = () => {
@@ -21,15 +21,15 @@ const UnlockSection = () => {
             <div className="section__content">
               <span className="sub-title">Tournament</span>
               <h2 className="title title-animation">
-                Smash Clash
+                Shuttle Royale
               </h2>
               <p>
                 Join us for an electrifying Badminton Showdown! Register your team now and 
                 compete for the ultimate racket prize!
               </p>
               <div className="section__content-cta">
-                <Link href="" className="btn btn--secondary" aria-disabled>
-                  Registration Closed
+                <Link href="/registration" className="btn btn--secondary">
+                  Register Now
                 </Link>
               </div>
             </div>

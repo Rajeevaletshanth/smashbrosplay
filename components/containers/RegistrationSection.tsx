@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import thumb from "@/public/images/registration wall.png";
+import thumb from "@/public/images/SRPoster.jpg";
 import mail from "@/public/images/contact/mail.png";
 import phone from "@/public/images/contact/phone.png";
 import location from "@/public/images/contact/location.png";
@@ -12,6 +12,7 @@ import meta from "@/public/images/meta.png";
 import MascotSelection from "./home/MascotSelection";
 import axios from "axios";
 import { useSearchParams } from 'next/navigation';
+import ValidateUser from "./authentication/ValidateUser";
 
 const RegistrationSection = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -25,15 +26,19 @@ const RegistrationSection = () => {
   const [secretCode, setSecretCode] = useState("")
   const [selectedMascot, setSelectedMascot] = useState<any>(null)
   const [data, setData] = useState<any>(null)
+  const [isReg,setIsReg] = useState<boolean>(false)
 
   const searchParams = useSearchParams();
 
-  const getData = async (code:any) => {
+  const getData = async (code: any) => {
     try {
       const response: any = await axios.get(`https://api.brexe.com/sbplay/getBySecret/${code}`)
       if (response.data.response === "success") {
         setCaptainName(response.data.data[0].captain_name)
         setPartnerName(response.data.data[0].partner_name)
+        setTeamName(response.data.data[0].team_name)
+        setMascot(response.data.data[0].fav_mascot)
+        setIsReg(true)
         if (response.data.data[0].is_registered) {
           setData(response.data.data[0])
           setTeamName(response.data.data[0].team_name)
@@ -53,29 +58,36 @@ const RegistrationSection = () => {
           setData(null)
         }
       } else {
+        setIsReg(false)
         setData(null)
       }
     } catch (error) {
+      setIsReg(false)
       setData(null)
     }
   }
 
   useEffect(() => {
-    if (searchParams.get('secret_code')) {
-      const code :any = searchParams.get('secret_code');
-      setSecretCode(code)
-      getData(code)
+    const id = localStorage.getItem('id');
+    if (id) {
+      setSecretCode(id)
+      getData(id)
     }
   }, [])
 
   const handleSubmit = async () => {
     try {
       setLoading(true)
-      const response: any = await axios.put(`https://api.brexe.com/sbplay/edit/${secretCode}`, {
+      const response: any = await axios.post(`https://api.brexe.com/sbplay/create`, {
         team_name: teamName,
         captain_name: captainName,
         partner_name: partnerName,
+        secret_code: secretCode,
         fav_mascot: mascot
+      }, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
       })
       if (response.data.response === "success") {
         getData(secretCode)
@@ -91,6 +103,7 @@ const RegistrationSection = () => {
 
   return (
     <section className=" m-contact fade-wrapper">
+      <ValidateUser keepPage={true} checkToken={true} />
       <div className="container">
         <div className="row gaper align-items-center">
 
@@ -121,72 +134,72 @@ const RegistrationSection = () => {
                 </div>
               </section>
                 : */}
-                <section className="authentication2 auth-create">
-                  <div className="authentication-wrapper">
-                    <div className="authentication__content section">
+              <section className="authentication2 auth-create">
+                <div className="authentication-wrapper">
+                  <div className="authentication__content section">
 
-                      <div className="authentication__inner">
-                        <h3 className="title-animation fw-7 text-white text-uppercase mt-12">
-                          {data ? 'TEAM REGISTERED SUCCESSFULLY' : 'REGISTER YOUR TEAM DETAILS'}
-                        </h3>
+                    <div className="authentication__inner">
+                      <h3 className="title-animation fw-7 text-white text-uppercase mt-12">
+                        {isReg ? 'TEAM REGISTERED SUCCESSFULLY' : 'REGISTER YOUR TEAM DETAILS'}
+                      </h3>
 
-                        <form action="#" method="post">
-                          <div className="input-single">
-                            <label htmlFor="createuserName">Captain&apos;s Name</label>
-                            <div className="ic-group">
-                              <input
-                                type="text"
-                                name="createuser-name"
-                                id="createuserName"
-                                placeholder="Captain's Name"
-                                value={captainName}
-                                onChange={(e: any) => setCaptainName(e.target.value)}
-                                required
-                                disabled={data}
-                              />
-                              <span className="material-symbols-outlined">
-                                person
-                              </span>
-                            </div>
+                      <form action="#" method="post">
+                        <div className="input-single">
+                          <label htmlFor="createuserName">Captain&apos;s Name</label>
+                          <div className="ic-group">
+                            <input
+                              type="text"
+                              name="createuser-name"
+                              id="createuserName"
+                              placeholder="Captain's Name"
+                              value={captainName}
+                              onChange={(e: any) => setCaptainName(e.target.value)}
+                              required
+                              disabled={data}
+                            />
+                            <span className="material-symbols-outlined">
+                              person
+                            </span>
                           </div>
-                          <div className="input-single">
-                            <label htmlFor="createuserName">Partner&apos;s Name</label>
-                            <div className="ic-group">
-                              <input
-                                type="text"
-                                name="createuser-name"
-                                id="createuserName"
-                                value={partnerName}
-                                placeholder="Partner&apos;s Name"
-                                onChange={(e: any) => setPartnerName(e.target.value)}
-                                required
-                                disabled={data}
-                              />
-                              <span className="material-symbols-outlined">
-                                handshake
-                              </span>
-                            </div>
+                        </div>
+                        <div className="input-single">
+                          <label htmlFor="createuserName">Partner&apos;s Name</label>
+                          <div className="ic-group">
+                            <input
+                              type="text"
+                              name="createuser-name"
+                              id="createuserName"
+                              value={partnerName}
+                              placeholder="Partner&apos;s Name"
+                              onChange={(e: any) => setPartnerName(e.target.value)}
+                              required
+                              disabled={data}
+                            />
+                            <span className="material-symbols-outlined">
+                              handshake
+                            </span>
                           </div>
-                          <div className="input-single">
-                            <label htmlFor="createuserName">Team Name</label>
-                            <div className="ic-group">
-                              <input
-                                type="text"
-                                name="createuser-name"
-                                id="createuserName"
-                                placeholder="Team Name"
-                                value={teamName}
-                                onChange={(e: any) => setTeamName(e.target.value)}
-                                required
-                                disabled={data}
-                              />
-                              <span className="material-symbols-outlined">
-                                sports
-                              </span>
-                            </div>
+                        </div>
+                        <div className="input-single">
+                          <label htmlFor="createuserName">Team Name</label>
+                          <div className="ic-group">
+                            <input
+                              type="text"
+                              name="createuser-name"
+                              id="createuserName"
+                              placeholder="Team Name"
+                              value={teamName}
+                              onChange={(e: any) => setTeamName(e.target.value)}
+                              required
+                              disabled={data}
+                            />
+                            <span className="material-symbols-outlined">
+                              sports
+                            </span>
                           </div>
+                        </div>
 
-                          <div className="input-single">
+                        {/* <div className="input-single">
                             <label htmlFor="createPassword">Secret Code</label>
                             <div className="ic-group pass">
                               <span
@@ -207,46 +220,47 @@ const RegistrationSection = () => {
                               />
                               <span className="material-symbols-outlined">key</span>
                             </div>
-                          </div>
-                          <div className="input-single">
-                            <label htmlFor="createPassword">Favourite Mascot</label>
-                            <div className="ic-group mb-4" >
-                              <input
-                                type="text"
-                                name="createuser-name"
-                                id="createuserName"
-                                placeholder="Select or Enter your favourite mascot (Optional)"
-                                required
-                                value={mascot}
-                                disabled={data}
-                                onChange={(e: any) => setMascot(e.target.value)}
-                              />
-                              <span className="material-symbols-outlined">
-                                swords
-                              </span>
-                            </div>
-                            { !data && <MascotSelection opened={opened} setMascot={setMascot} />}
-                          </div>
+                          </div> */}
 
-                          {!data && <div className="section__content-cta">
-                            <button type="button" onClick={handleSubmit} disabled={loading || !captainName || !partnerName || !teamName || !secretCode} className={`btn btn--primary ${loading ? 'btn--loading' : ''}`} >
-                              {loading ? 'Registering' : data ? 'Update Now' : 'Register Now'}
-                            </button>
-                          </div>}
-                          {data && <div className="section__content-cta">
-                            <a type="button" href="teams" className={`btn btn--primary`} >
-                              Check Registered Teams
-                            </a>
-                          </div>}
-                          {error && <div className="p-4 mt-3 rounded-xl" style={{ backgroundColor: '#dc3545', borderRadius: '10px', color: 'white' }}>
-                            {error}
-                          </div>}
-                        </form>
-                      </div>
+                        <div className="input-single">
+                          <label htmlFor="createPassword">Favourite Mascot</label>
+                          <div className="ic-group mb-4" >
+                            <input
+                              type="text"
+                              name="createuser-name"
+                              id="createuserName"
+                              placeholder="Select or Enter your favourite mascot (Optional)"
+                              required
+                              value={mascot}
+                              disabled={isReg}
+                              onChange={(e: any) => setMascot(e.target.value)}
+                            />
+                            <span className="material-symbols-outlined">
+                              swords
+                            </span>
+                          </div>
+                          {!isReg && <MascotSelection opened={opened} setMascot={setMascot} />}
+                        </div>
+
+                        {!isReg && <div className="section__content-cta">
+                          <button type="button" onClick={handleSubmit} disabled={loading || !captainName || !partnerName || !teamName || !secretCode} className={`btn btn--primary ${loading ? 'btn--loading' : ''}`} >
+                            {loading ? 'Registering' : isReg ? 'Update Now' : 'Register Now'}
+                          </button>
+                        </div>}
+                        {isReg && <div className="section__content-cta">
+                          <a type="button" href="tournaments" className={`btn btn--primary`} >
+                            Check Registered Teams
+                          </a>
+                        </div>}
+                        {error && <div className="p-4 mt-3 rounded-xl" style={{ backgroundColor: '#dc3545', borderRadius: '10px', color: 'white' }}>
+                          {error}
+                        </div>}
+                      </form>
                     </div>
                   </div>
-                </section>
-                {/* } */}
+                </div>
+              </section>
+              {/* } */}
             </div>
           </div>
           <div className="col-12 col-lg-6 col-xl-5 offset-xl-1">

@@ -24,7 +24,7 @@ const AboutCraft = () => {
             <div className="section__content">
               {/* <span className="sub-title">Coming Soon</span> */}
               <h2 className="title title-animation">
-                Smash Clash
+                Shuttle Royale
               </h2>
               <p>
                 Join us for an electrifying Badminton Showdown! Register your team now and compete for the ultimate racket prize!
