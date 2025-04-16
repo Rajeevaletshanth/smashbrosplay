@@ -37,7 +37,7 @@ const SignInSection = () => {
               localStorage.setItem('rank', response.data.user.rank)
               localStorage.setItem('token', response.data.token)
               localStorage.setItem('id', response.data.user.id)
-              router.push('/squad')
+              router.push('/registration')
           }else{
             setError(response.data.message)
           }
