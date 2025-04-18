@@ -20,7 +20,6 @@ const TeamBanner = () => {
   return (
     <section className='section bg-black'>
       <>
-      <AboutTextSlider text="SHARKS"/>
       <div className=" parallax-img text-center">
         <Image
           src={sharksBanner}
@@ -30,11 +29,11 @@ const TeamBanner = () => {
         />
           
       </div>
+      <AboutTextSlider text="SHARKS"/>
       {/* <TeamCraft no={1} name={'SHARKS'} players="Thenushkan / Millington" rank={'N/A'} logo={sharksLogo} color='#0a63bd'/> */}
       
       </>
       <>
-      <AboutTextSlider text="BIRDIES"/>
       <div className=" parallax-img text-center">
         <Image
           src={birdiesBanner}
@@ -44,12 +43,12 @@ const TeamBanner = () => {
         />
           
       </div>
+      <AboutTextSlider text="BIRDIES"/>
       {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
       
       </>
 
       <>
-      <AboutTextSlider text="LAMBERT'S SMASH"/>
       <div className=" parallax-img text-center">
         <Image
           src={lsBanner}
@@ -59,12 +58,12 @@ const TeamBanner = () => {
         />
           
       </div>
+      <AboutTextSlider text="LAMBERT'S SMASH"/>
       {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
       
       </>
 
       <>
-      <AboutTextSlider text="EXBOLTS"/>
       <div className=" parallax-img text-center">
         <Image
           src={exboltsBanner}
@@ -74,6 +73,7 @@ const TeamBanner = () => {
         />
           
       </div>
+      <AboutTextSlider text="EXBOLTS"/>
       {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
       
       </>
