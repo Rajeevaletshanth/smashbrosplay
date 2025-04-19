@@ -21,7 +21,7 @@ import AboutTextSlider from '@/components/containers/about/AboutTextSlider';
 
 const TeamBanner = () => {
   return (
-    <section className='section bg-black'>
+    <section className='mt-6'>
       <>
       <div className=" parallax-img text-center">
         <Image

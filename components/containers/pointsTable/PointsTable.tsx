@@ -58,21 +58,21 @@ const PointTable: React.FC = () => {
         <section className="mt-4 pb-0 craft">
       <div className="container">
         <div className="table-container">
-            <h2 className="table-header" style={{ color: 'rgb(0, 255, 89)' }}>POINTS TABLE</h2>
+            <h2 className="table-header" style={{ color: 'white' }}>POINTS TABLE</h2>
             <div className="table-standings">
                 {/* <h3 className="table-header">STANDINGS</h3> */}
                 <table>
                     <thead>
                         <tr>
                             <th></th>
-                            <th className='text-black' style={{ textAlign: 'left' }}>Teams</th>
-                            <th className='text-black'>P</th>
-                            <th className='text-black'>W</th>
-                            <th className='text-black'>L</th>
-                            <th className='text-black'>SW</th>
-                            <th className='text-black'>SP</th>
-                            <th className='text-black'>Pts</th>
-                            <th className='text-black'>SW/SP Ratio</th>
+                            <th className='text-white' style={{ textAlign: 'left' }}>Teams</th>
+                            <th className='text-white'>P</th>
+                            <th className='text-white'>W</th>
+                            <th className='text-white'>L</th>
+                            <th className='text-white'>SW</th>
+                            <th className='text-white'>SP</th>
+                            <th className='text-white'>Pts</th>
+                            <th className='text-white'>SW/SP Ratio</th>
                         </tr>
                     </thead>
                     <tbody>
