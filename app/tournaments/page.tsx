@@ -32,7 +32,7 @@ const page = () => {
         {/* <AboutBanner /> */}
         <HomeSevenBanner />
         {/* <CommonBanner title="Tournaments" /> */}
-        {/* <Sponsor /> */}
+        <Sponsor />
         {/* <AboutPoster /> */}
         <AboutCraft />
         <PointsTable />

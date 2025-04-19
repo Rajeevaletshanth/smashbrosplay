@@ -4,16 +4,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
-import team1 from "@/public/images/teams/logo/Titans.png";
-import team2 from "@/public/images/teams/logo/Code Red.png";
-import team3 from "@/public/images/teams/logo/Dark Rogers.png";
-import team4 from "@/public/images/teams/logo/Team Baddies.png";
-import team5 from "@/public/images/teams/logo/Smashers.png";
-import team6 from "@/public/images/teams/logo/Venpura.png";
+import team1 from "@/public/images/teams/logo/Sharks.png";
+import team2 from "@/public/images/teams/logo/Birdies.png";
+import team3 from "@/public/images/teams/logo/Lambert's Smash.png";
+import team4 from "@/public/images/teams/logo/Exbolts.png";
+import team5 from "@/public/images/teams/logo/Red Dragon.png";
+// import team6 from "@/public/images/teams/logo/Venpura.png";
 
 const Sponsor = ({color}:any) => {
 
-  const teamImages = [team1, team2, team3, team4, team5, team6];
+  const teamImages = [team1, team2, team3, team4, team5];
 
 const renderSlides = () => {
   const slides:any = [];

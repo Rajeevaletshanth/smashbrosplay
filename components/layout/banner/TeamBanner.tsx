@@ -11,6 +11,9 @@ import lsLogo from "@/public/images/teams/logo/Lambert's Smash.png";
 import exboltsBanner from "@/public/images/teams/banners/Exbolts Cover.jpg";
 import exboltsLogo from "@/public/images/teams/logo/Exbolts.png";
 
+import redDragonBanner from "@/public/images/teams/banners/Red Dragon Cover.jpg";
+import redDragonLogo from "@/public/images/teams/logo/Red Dragon.png";
+
 import Image from 'next/image';
 import AboutCraft from '@/components/containers/about/AboutCraft';
 import TeamCraft from '@/components/containers/about/TeamCraft';
@@ -74,6 +77,21 @@ const TeamBanner = () => {
           
       </div>
       <AboutTextSlider text="EXBOLTS"/>
+      {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
+      
+      </>
+
+      <>
+      <div className=" parallax-img text-center">
+        <Image
+          src={redDragonBanner}
+          alt="Team Banner"
+          priority
+          layout="responsive"
+        />
+          
+      </div>
+      <AboutTextSlider text="RED DRAGON"/>
       {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
       
       </>

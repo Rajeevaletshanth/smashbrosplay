@@ -32,7 +32,7 @@ const page = () => {
         {/* <CommonBanner title="Teams" /> */}
         {/* <AboutTextSlider text="TEAMS"/> */}
         {/* <VideoSection /> */}
-        {/* <Sponsor color="bg-black"/> */}
+        <Sponsor color="bg-black"/>
         <TeamBanner />
         {/* <AboutPoster /> */}
         {/* <AboutCraft /> */}
