@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
@@ -23,6 +23,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ id, content, banner }) => {
+    const ref = useRef<HTMLDivElement>(null);
     const [{ isDragging }, drag] = useDrag(() => ({
         type: ItemType.CARD,
         item: { id },
@@ -31,9 +32,15 @@ const Card: React.FC<CardProps> = ({ id, content, banner }) => {
         }),
     }));
 
+    useEffect(() => {
+        if (ref.current) {
+            drag(ref);
+        }
+    }, [ref, drag]);
+
     return (
         <div
-            ref={drag}
+            ref={ref}
             className=" my-2  text-black shadow cursor-move overflow-hidden"
             style={{ borderRadius: '10px' }}
         // style={{ opacity: isDragging ? 0.5 : 1 }}
@@ -58,13 +65,20 @@ interface GroupProps {
 }
 
 const Group: React.FC<GroupProps> = ({ name, cards, onDropCard }) => {
+    const ref = useRef<HTMLDivElement>(null);
     const [, drop] = useDrop(() => ({
         accept: ItemType.CARD,
         drop: (item: { id: number }) => onDropCard(item.id),
     }));
 
+    useEffect(() => {
+        if (ref.current) {
+            drop(ref);
+        }
+    }, [ref, drop]);
+
     return (
-        <div ref={drop} className="w-full min-h-[200px] p-3 my-2 rounded" style={{ backgroundColor: '#21262f' }}>
+        <div ref={ref} className="w-full min-h-[200px] p-3 my-2 rounded" style={{ backgroundColor: '#21262f' }}>
             <h3 className="font-bold text-white mb-2" >{name}</h3>
             {cards.map((card) => (
                 <Card key={card.id} {...card} />
