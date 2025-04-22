@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { TouchBackend } from 'react-dnd-touch-backend'; // For mobile
 
 import sharksBanner from "@/public/images/teams/banners/Sharks Cover.jpg";
 import birdiesBanner from "@/public/images/teams/banners/Birdies Cover.jpg";
@@ -154,7 +155,7 @@ const GroupSorter: React.FC = () => {
     };
 
     return (
-        <DndProvider backend={HTML5Backend}>
+        <DndProvider backend={typeof window !== 'undefined' && window.innerWidth < 768 ? TouchBackend : HTML5Backend}>
             <div className="">
             <div
   style={{
