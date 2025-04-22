@@ -20,6 +20,10 @@ import powerBoysLogo from "@/public/images/teams/logo/Power Boys.png";
 import rgmBanner from "@/public/images/teams/banners/RGM Cover.jpg";
 import rgmLogo from "@/public/images/teams/logo/RGM.png";
 
+import dcslBanner from "@/public/images/teams/banners/DCSL Wolves Cover.jpg";
+import dcslLogo from "@/public/images/teams/logo/DCSL Wolves.png";
+
+
 import Image from 'next/image';
 import AboutCraft from '@/components/containers/about/AboutCraft';
 import TeamCraft from '@/components/containers/about/TeamCraft';
@@ -128,6 +132,21 @@ const TeamBanner = () => {
           
       </div>
       <AboutTextSlider text="RGM"/>
+      {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
+      
+      </>
+
+      <>
+      <div className=" parallax-img text-center">
+        <Image
+          src={dcslBanner}
+          alt="Team Banner"
+          priority
+          layout="responsive"
+        />
+          
+      </div>
+      <AboutTextSlider text="DCSL WOLVES"/>
       {/* <TeamCraft no={2} name={'SHARKS'} players="Rubanraj / Kathires" rank={'N/A'} logo={birdiesLogo} color='#0a63bd'/> */}
       
       </>

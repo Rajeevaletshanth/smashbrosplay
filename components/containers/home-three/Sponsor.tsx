@@ -11,10 +11,11 @@ import team4 from "@/public/images/teams/logo/Exbolts.png";
 import team5 from "@/public/images/teams/logo/Red Dragon.png";
 import team6 from "@/public/images/teams/logo/Power Boys.png";
 import team7 from "@/public/images/teams/logo/RGM.png";
+import team8 from "@/public/images/teams/logo/DCSL Wolves.png";
 
 const Sponsor = ({color}:any) => {
 
-  const teamImages = [team1, team2, team3, team4, team5, team6, team7];
+  const teamImages = [team1, team2, team3, team4, team5, team6, team7, team8];
 
 const renderSlides = () => {
   const slides:any = [];
