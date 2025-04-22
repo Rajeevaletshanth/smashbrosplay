@@ -23,6 +23,7 @@ import Fixtures from "@/components/containers/home-two/Fixtures";
 import Results from "@/components/containers/home-two/Results";
 import Brackets from "@/components/containers/brackets/Brackets";
 import VideoSection from "@/components/containers/home/VideoSection";
+import CoinFlipper from "@/components/containers/pointsTable/CoinFlipper";
 
 const page = () => {
   return (
@@ -36,6 +37,7 @@ const page = () => {
         {/* <AboutPoster /> */}
         <AboutCraft />
         <PointsTable />
+        <CoinFlipper />
         {/* <Brackets /> */}
         {/* <AboutTextSlider text='PLAYOFFS' /> */}
         {/* <AboutOverview />
