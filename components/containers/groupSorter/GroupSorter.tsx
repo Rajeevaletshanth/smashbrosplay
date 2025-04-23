@@ -11,6 +11,7 @@ import redDragonBanner from "@/public/images/teams/banners/Red Dragon Cover.jpg"
 import powerBoysBanner from "@/public/images/teams/banners/Power Boys Cover.jpg";
 import rgmBanner from "@/public/images/teams/banners/RGM Cover.jpg";
 import dcslBanner from "@/public/images/teams/banners/DCSL Wolves Cover.jpg";
+import kitchenMastersBanner from "@/public/images/teams/banners/Kitchen Masters Cover.jpg";
 import Image from 'next/image';
 
 const ItemType = {
@@ -129,6 +130,11 @@ const GroupSorter: React.FC = () => {
             id: 8,
             content: `DCSL WOLVES`,
             banner: dcslBanner
+        },
+        {
+            id: 9,
+            content: `KITCHEN MASTERS`,
+            banner: kitchenMastersBanner
         },
     ];
 
