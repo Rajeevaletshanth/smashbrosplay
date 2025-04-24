@@ -25,8 +25,9 @@ const CoinFlipper: React.FC = () => {
               Let fate decide your group.
                             </p>
             <iframe
-      src="https://flipsimu.com/emb/coin?id=pVdPU"
-      width="50%"
+      src="https://flipsimu.com/emb/coin?id=cpnYu"
+    //   https://flipsimu.com/emb/coin?id=pVdPU
+    //   width="50%"
       height="430px"
       scrolling="no"
       frameBorder="0"

@@ -64,9 +64,10 @@ interface GroupProps {
     name: string;
     cards: CardProps[];
     onDropCard: (id: number) => void;
+    color?:any;
 }
 
-const Group: React.FC<GroupProps> = ({ name, cards, onDropCard }) => {
+const Group: React.FC<GroupProps> = ({ name, cards, onDropCard, color = '#0a1f37' }) => {
     const ref = useRef<HTMLDivElement>(null);
     const [, drop] = useDrop(() => ({
         accept: ItemType.CARD,
@@ -80,8 +81,8 @@ const Group: React.FC<GroupProps> = ({ name, cards, onDropCard }) => {
     }, [ref, drop]);
 
     return (
-        <div ref={ref} className="w-full min-h-[200px] p-3 my-2 rounded" style={{ backgroundColor: '#21262f' }}>
-            <h3 className="font-bold text-white mb-2" >{name}</h3>
+        <div ref={ref} className="w-full min-h-[200px] p-3 my-2" style={{ border: `3px solid ${color}`, borderRadius:'15px' }}>
+            <h4 className="font-bold text-white mb-2" >{name}</h4>
             {cards.map((card) => (
                 <Card key={card.id} {...card} />
             ))}
@@ -162,35 +163,29 @@ const GroupSorter: React.FC = () => {
 
     return (
         <DndProvider backend={typeof window !== 'undefined' && window.innerWidth < 768 ? TouchBackend : HTML5Backend}>
-            <div className="">
-            <div
-  style={{
-    display: 'flex',
-    flexDirection: 'row',
-    gap: '1rem',
-    width: '100%',
-  }}
->
-  {/* Left - All Teams */}
-  {ungrouped.length > 0 && (
-    <div style={{ flex: 1 }}>
-      <Group name="All Teams" cards={ungrouped} onDropCard={() => {}} />
-    </div>
-  )}
+            <div className="mt-3">
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        gap: '1rem',
+                        width: '100%',
+                    }}
+                >
+                    <div style={{width:'50%'}}>
 
-  {/* Right - Group A on top of Group B */}
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '1rem',
-      flex: 1,
-    }}
-  >
-    <Group name="Group A" cards={groupA} onDropCard={(id) => moveCard(id, 'A')} />
-    <Group name="Group B" cards={groupB} onDropCard={(id) => moveCard(id, 'B')} />
-  </div>
-</div>
+                    <Group name="Group A" cards={groupA} onDropCard={(id) => moveCard(id, 'A')} color='#504d8d'/>
+                    </div>
+                    <div style={{width:'50%'}}>
+
+                    <Group name="Group B" cards={groupB} onDropCard={(id) => moveCard(id, 'B')} color='#d94a83' />
+                    </div>
+                </div>
+                {ungrouped.length > 0 && (
+                    <div style={{ flex: 1 }}>
+                        <Group name="All Teams" cards={ungrouped} onDropCard={() => { }} />
+                    </div>
+                )}
 
             </div>
         </DndProvider>
