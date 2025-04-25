@@ -12,6 +12,7 @@ import powerBoysBanner from "@/public/images/teams/banners/Power Boys Cover.jpg"
 import rgmBanner from "@/public/images/teams/banners/RGM Cover.jpg";
 import dcslBanner from "@/public/images/teams/banners/DCSL Wolves Cover.jpg";
 import kitchenMastersBanner from "@/public/images/teams/banners/Kitchen Masters Cover.jpg";
+import pkkBanner from "@/public/images/teams/banners/PKK Cover.jpg";
 import Image from 'next/image';
 
 const ItemType = {
@@ -137,6 +138,11 @@ const GroupSorter: React.FC = () => {
             content: `KITCHEN MASTERS`,
             banner: kitchenMastersBanner
         },
+        {
+            id: 10,
+            content: `PKK`,
+            banner: pkkBanner
+        }
     ];
 
     const [ungrouped, setUngrouped] = useState<CardProps[]>(initialCards);
