@@ -37,7 +37,7 @@ const page = () => {
         {/* <AboutPoster /> */}
         <AboutCraft />
         <PointsTable />
-        <CoinFlipper />
+        {/* <CoinFlipper /> */}
         {/* <Brackets /> */}
         {/* <AboutTextSlider text='PLAYOFFS' /> */}
         {/* <AboutOverview />
