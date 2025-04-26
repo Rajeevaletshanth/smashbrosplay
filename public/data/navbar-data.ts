@@ -5,7 +5,7 @@ const NavbarData = [
   },
   {
     title: "Tournaments",
-    path: "/tournaments",
+    path: "https://score.smashbrosplay.com",
   },
   {
     title: "Teams",

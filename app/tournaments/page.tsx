@@ -42,8 +42,8 @@ const page = () => {
         {/* <AboutTextSlider text='PLAYOFFS' /> */}
         {/* <AboutOverview />
         <AboutTool /> */}
-        <Fixtures />
-        <Results />
+        {/* <Fixtures /> */}
+        {/* <Results /> */}
         {/* <VideoSection /> */}
         <div style={{padding:'100px'}}></div>
       </main>
